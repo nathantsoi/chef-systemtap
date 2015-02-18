@@ -11,5 +11,6 @@ node['systemtap']['tools']['prefix'] = '/opt/nginx-tools'
 set to install only systemtap set, skipping nginx-systemtap-toolkit
 
 ```
-node['systemtap']['nginx']['tools'] = false
+node['systemtap']['tools']['clone'] = false
+node['systemtap']['flamegraph']['clone']= false
 ```

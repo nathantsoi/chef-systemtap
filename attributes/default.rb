@@ -1,4 +1,5 @@
-default['systemtap']['nginx']['tools'] = true
+default['systemtap']['tools']['clone'] = true
+default['systemtap']['flamegraph']['clone'] = true
 
 # Package Dependencies
 default['systemtap']['dependencies']['packages'] = %w/build-essential zlib1g-dev elfutils libdw-dev gettext/
@@ -13,10 +14,12 @@ default['systemtap']['source']['url']       = "https://sourceware.org/systemtap/
 default['systemtap']['source']['checksum']  = '9ff5d27602f65b8ad3b8165e48cc562638e5d7f22ff0238618dfb3be168ef151'
 
 default['systemtap']['tools']['git_repo']   =  'https://github.com/openresty/nginx-systemtap-toolkit.git'
+default['systemtap']['flamegraph']['git_repo'] = 'https://github.com/brendangregg/FlameGraph.git'
 
 # Directories
 default['systemtap']['source']['prefix']    = '/opt/stap'
 default['systemtap']['tools']['prefix']     = '/opt/nginx-tools'
+default['systemtap']['flamegraph']['prefix'] = '/opt/flamegraph'
 
 # Configure flags
 default['systemtap']['source']['default_configure_flags'] = [

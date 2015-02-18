@@ -33,7 +33,13 @@ git node['systemtap']['tools']['prefix'] do
   repository node['systemtap']['tools']['git_repo']
   revision "master"
   action :sync
-  only_if { node['systemtap']['nginx']['tools']}
+  only_if { node['systemtap']['tools']['clone'] }
 end
 
+git node['systemtap']['flamegraph']['prefix'] do
+  repository node['systemtap']['flamegraph']['git_repo']
+  revision "master"
+  action :sync
+  only_if { node['systemtap']['flamegraph']['clone'] }
+end
 
